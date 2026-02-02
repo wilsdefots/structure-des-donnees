@@ -10,7 +10,7 @@ public :
 	Vehicule(std::string id, std::string type,  int waitTime);
 	Vehicule(std::string id, std::string type);
 	Vehicule();
-	~Vehicule(); // Je veux faire un nettoyage propre
+	~Vehicule(); 
 
 
 	void increaseWaitTime(int nombreDeTours);

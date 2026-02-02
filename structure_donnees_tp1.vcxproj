@@ -123,10 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileAttente.cpp" />
+    <ClCompile Include="Road.cpp" />
     <ClCompile Include="structure_donnees_tp1.cpp" />
     <ClCompile Include="Vehicule.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccessoireRoutier.h" />
+    <ClInclude Include="DoubleNode.h" />
+    <ClInclude Include="FileAttente.h" />
+    <ClInclude Include="Road.h" />
+    <ClInclude Include="SimpleNode.h" />
     <ClInclude Include="Vehicule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

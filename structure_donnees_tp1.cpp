@@ -6,22 +6,27 @@
 
 #include <iostream>
 #include <iostream>
+#include "FileAttente.h"
 
 
 #include"Vehicule.h"
-#include"Vehicule.cpp"
+
+
+
+
 
 int main()
 {
-    Vehicule* voiture = new Vehicule();
 
-    voiture->display(); 
-    voiture->increaseWaitTime(6); 
-    voiture->display(); 
-    voiture->decreaseWaitTime();
-   // voiture->decreaseWaitTime();
-    std::cout << voiture->getWaitTime(); 
-
+    Vehicule maVoiture  ; 
+    Vehicule laVoiture("N002","Nissan");
+    SimpleNode*  noeud1 = new SimpleNode(maVoiture); 
+    SimpleNode* noeud2 = new SimpleNode(laVoiture);
+    FileVehicule* file = new FileVehicule(); 
+    file->enqueue(noeud1);
+    file->enqueue(noeud2); 
+    
+    file->display();
     return 0; 
 
 }

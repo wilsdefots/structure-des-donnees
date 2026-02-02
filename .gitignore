@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+
+# Fichiers compilés
+*.exe
+*.obj
+*.pdb
+*.ilk
+
+# CMake (si jamais)
+CMakeFiles/
+CMakeCache.txt
+
+# Logs temporaires
+*.log
+
+# Fichiers système Windows
+Thumbs.db
+Desktop.ini

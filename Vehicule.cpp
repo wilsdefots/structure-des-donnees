@@ -13,19 +13,19 @@ Vehicule::Vehicule(std::string id, std::string type, std::string destination, in
 
 Vehicule::Vehicule(std::string id, std::string type, std::string destination)
 	: Vehicule(id, type, destination, 0)
-{
+{//si le temps d attente n est pas fourni, on le set à 0
 }
 
 Vehicule::Vehicule(std::string id, std::string type, int waitTime)
-	: Vehicule(id, type, "", waitTime)
+	: Vehicule(id, type, "destination inconnue", waitTime)
 {
 }
 
 Vehicule::Vehicule(std::string id, std::string type)
-	: Vehicule(id, type, "", 0){  
+	: Vehicule(id, type, "destination inconnue", 0){  
 }
 
-Vehicule::Vehicule() : Vehicule("inconnu", "inconnu", " ", 0) {
+Vehicule::Vehicule() : Vehicule("Vehicule non enregistre a la SAAQ", "type inconnu", "destination inconnue", 0) {
 
 }
 
@@ -40,9 +40,12 @@ void Vehicule::decreaseWaitTime(int nombreDeTours)
 {
 	if (this->waitTime <= nombreDeTours) {
 		this->waitTime = 0; 
+		return; 
 	}
 	this->waitTime -= nombreDeTours; 
 }
+
+
 
 void Vehicule::display() const
 {
