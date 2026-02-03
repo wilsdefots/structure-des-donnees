@@ -1,11 +1,17 @@
-#include "FileAttente.h"
+#include "FileVehicule.h"
 
 
-FileVehicule::~FileVehicule(){
-	while (!isEmpty()) {
-		dequeue();
+FileVehicule::~FileVehicule() {
+	SimpleNode* current = head;
+	while (current != nullptr) {
+		SimpleNode* temp = current;
+		current = current->next;  // Passe au noeud suivant
+		delete temp;                   // Supprime le noeud actuel
 	}
+	head = nullptr;
+	queue = nullptr;
 }
+
 
 // Vérifier si la file est vide
 bool FileVehicule::isEmpty() const {

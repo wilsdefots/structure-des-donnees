@@ -30,9 +30,10 @@ public :
 	inline SimpleNode* getHead() const { return this->head; }
 	inline SimpleNode* getQueue() const { return this->queue;  }
 
+
 private: 
 	SimpleNode* head  ; 
-	SimpleNode* queue;
+	SimpleNode* queue ;
 
 };
 

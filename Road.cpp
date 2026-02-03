@@ -7,20 +7,6 @@ Road::Road(std::string nom, FileVehicule*& file, Direction direction)
 	this->direction = direction;
 }
 
-Road::~Road() {
-    if (this->fileDeVehicule != nullptr) {
-        // On supprime tous les véhicules de la file avant de supprimer la file elle-même
-        while (!this->fileDeVehicule->isEmpty()) {
-            Vehicule* v = this->fileDeVehicule->peek();  
-            delete v;                    
-            this->fileDeVehicule->dequeue();     
-        }
-
-        // Maintenant on peut supprimer la file et reinitialiser
-        delete this->fileDeVehicule;
-        this->fileDeVehicule = nullptr;
-    }
-}
 
 void Road::addVehicule(Vehicule v)
 {
@@ -58,6 +44,8 @@ void Road::increaseAllWaitTimes()
     }
 }
 
+
+
 void Road::display()
 {
 
@@ -66,6 +54,8 @@ void Road::display()
         << dateHeure() << std::endl;
     this->fileDeVehicule->display(); 
 }
+
+
 
 int Road::getVehicleCount()
 {
